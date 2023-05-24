@@ -7,12 +7,37 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+        backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        },
+        animation: {
+            'fade-in-up': 'fade-in-up 0.2s ease-out',
+        },
+        keyframes: {
+            'fade-in-up': {
+                '0%': {
+                    opacity: '0',
+                    transform: 'translateY(10px)',
+                },
+                '100%': {
+                    opacity: '1',
+                    transform: 'translateY(0)',
+                },
+            },
+        },
     },
-  },
-  plugins: [],
-}
+},
+plugins: [],
+};
+//   theme: {
+//     extend: {
+//       backgroundImage: {
+//         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+//         'gradient-conic':
+//           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+//       },
+//     },
+//   },
+//   plugins: [],
+// }
